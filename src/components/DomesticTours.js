@@ -41,8 +41,7 @@ function DomesticTours() {
   };
 
   return (
-    <TourParent
-    >
+    <TourParent>
       <Fade>
         <RecommendedTour>
           <h1>National Tours</h1>
@@ -98,18 +97,20 @@ function DomesticTours() {
                   >
                     {item.category}
                   </span>
-                  <button
-                    style={{
-                      backgroundColor: "#f2892c",
-                      padding: "10px 25px",
-                      borderRadius: "5px",
-                      border: "none",
-                      color: "white",
-                      cursor: "pointer",
-                    }}
-                  >
-                    PLAN
-                  </button>
+                  <a href={item.pdf} target="_blank" rel="noopener noreferrer">
+                    <button
+                      style={{
+                        backgroundColor: "#f2892c",
+                        padding: "10px 25px",
+                        borderRadius: "5px",
+                        border: "none",
+                        color: "white",
+                        cursor: "pointer",
+                      }}
+                    >
+                      PLAN
+                    </button>
+                  </a>
                 </div>
               </Card>
             ))}
@@ -128,13 +129,11 @@ const RecommendedTour = styled.div`
   color: #03367e;
   margin-top: 20px;
   margin-bottom: -50px;
-  h1{
+  h1 {
     @media (max-width: 768px) {
-    text-align:center
+      text-align: center;
+    }
   }
-  }
-
-
 `;
 
 const StyledCardSlider = styled.div`
@@ -143,9 +142,9 @@ const StyledCardSlider = styled.div`
 `;
 
 const TourParent = styled.div`
-    width: 80%;
-    margin: 100px auto;
-    @media (max-width: 768px) {
+  width: 80%;
+  margin: 100px auto;
+  @media (max-width: 768px) {
     width: 90%;
   }
 `;
@@ -159,7 +158,7 @@ const Card = styled.div`
   border-bottom:7px solid #03367e;
   justify-content:space-between;
   overflow: hidden;
-  ${'' /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */}
+  ${"" /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */}
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 500px;
   margin: 20px !important;
