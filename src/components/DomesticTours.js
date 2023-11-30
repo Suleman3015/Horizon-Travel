@@ -60,11 +60,7 @@ function DomesticTours() {
                 </div>
                 <div className="card-top">
                   <img
-                    src={
-                      defaultImage[item.title] === item.title
-                        ? defaultImage.linkDefault
-                        : item.linkImg
-                    }
+                    src={item.img}
                     alt={item.title}
                     onError={handleErrorImage}
                   />
@@ -95,7 +91,7 @@ function DomesticTours() {
                     style={{ color: "gray", fontWeight: "Bold" }}
                     className="category"
                   >
-                    {item.category}
+                    {item.days}
                   </span>
                   <a href={item.pdf} target="_blank" rel="noopener noreferrer">
                     <button
