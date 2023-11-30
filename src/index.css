@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* SLICK CAROUSAL CSS */
+
+.slick-prev,
+.slick-next,
+.slick-arrow {
+  background-color: #f48431 !important;
+  border-radius: 100%;
+  color: white;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 10 !important;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: orangered !important;
+}
+
+.slick-next:before {
+  opacity: 10 !important;
+}
+
+/* MATERIAL UI NAVBAR CSS */
+
+.MuiDrawer-paper {
+  width: 50% !important;
+}
+
+.MuiTypography-root.MuiTypography-body1.MuiListItemText-primary {
+  color: black !important;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-colorWhite.MuiSvgIcon-fontSizeMedium {
+  color: #f48431 !important;
+}
