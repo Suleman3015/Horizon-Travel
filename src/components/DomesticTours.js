@@ -48,8 +48,10 @@ function DomesticTours() {
         </RecommendedTour>
         <StyledCardSlider>
           <Carousel responsive={responsive}>
-            {DomesticTourStatic.map((item) => (
-              <Card
+            {DomesticTourStatic.map((item) => {
+              const message= `Hi i am interested in ${item.days} ${item.title} Tour.`
+              const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
+              return (<Card
                 style={{
                   margin: "30px 0px",
                 }}
@@ -93,6 +95,21 @@ function DomesticTours() {
                   >
                     {item.days}
                   </span>
+                  <div style={{display:"flex"}}>
+                  <a href={msg}>
+                    <button
+                      style={{
+                        backgroundColor: "#050f6b",
+                        padding: "10px 25px",
+                        borderRadius: "5px",
+                        border: "none",
+                        color: "white",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Query?
+                    </button>
+                  </a>
                   <a href={item.pdf} target="_blank" rel="noopener noreferrer">
                     <button
                       style={{
@@ -104,12 +121,13 @@ function DomesticTours() {
                         cursor: "pointer",
                       }}
                     >
-                      PLAN
+                      Plan?
                     </button>
                   </a>
+                  </div>
                 </div>
               </Card>
-            ))}
+            )})}
           </Carousel>
           <TourButton>
             <ViewButton to="/tour">View More</ViewButton>
@@ -152,6 +170,9 @@ const Card = styled.div`
   display:flex;
   flex-direction:column;
   border-bottom:7px solid #03367e;
+  border-top:none;
+  border-left:none;
+  border-right:none;
   justify-content:space-between;
   overflow: hidden;
   ${"" /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */}

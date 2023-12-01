@@ -42,78 +42,79 @@ function InternationalTours() {
   };
 
   return (
-    <TourParent
-    >
+    <TourParent>
       <Fade>
         <RecommendedTour>
           <h1>International Tours</h1>
         </RecommendedTour>
         <StyledCardSlider>
           <Carousel responsive={responsive}>
-            {InternationalToursStatic.map((item) => (
-              <Card
-                style={{
-                  margin: "30px 0px",
-                }}
-                key={item.id}
-              >
-                <div className="productsPageSavings">
-                  <p>30% Off</p>
-                </div>
-                <div className="card-top">
-                  <img
-                    src={
-                      defaultImage[item.title] === item.title
-                        ? defaultImage.linkDefault
-                        : item.linkImg
-                    }
-                    alt={item.title}
-                    onError={handleErrorImage}
-                  />
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "95%",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      padding: "0px 10px",
-                      marginTop: "10px",
-                    }}
-                  >
-                    <p
+            {InternationalToursStatic.map((item) => {
+              const message= `Hi i am interested in ${item.days} ${item.title} Tour.`
+              const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
+              return (
+                <Card
+                  style={{
+                    margin: "30px 0px",
+                  }}
+                  key={item.id}
+                >
+                  <div className="productsPageSavings">
+                    <p>30% Off</p>
+                  </div>
+                  <div className="card-top">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      onError={handleErrorImage}
+                    />
+                    <div
                       style={{
-                        color: "black",
-                        fontSize: "20px",
-                        fontWeight: "bold",
+                        display: "flex",
+                        width: "95%",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        padding: "0px 10px",
+                        marginTop: "10px",
                       }}
                     >
-                      {item.title}
-                    </p>
-                    <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+                      <p
+                        style={{
+                          color: "black",
+                          fontSize: "20px",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        {item.title}
+                      </p>
+                      <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+                    </div>
                   </div>
-                </div>
-                <div className="card-bottom">
-                  <span
-                    style={{ color: "gray", fontWeight: "Bold" }}
-                    className="category"
-                  >
-                    {item.category}
-                  </span>
-                  <button
-                    style={{
-                      backgroundColor: "#f2892c",
-                      padding: "10px 25px",
-                      borderRadius: "5px",
-                      border: "none",
-                      color: "white",
-                      cursor: "pointer",
-                    }}
-                  >
-                    PLAN
-                  </button>
-                </div>
-              </Card>
-            ))}
+                  <div className="card-bottom">
+                    <span
+                      style={{ color: "gray", fontWeight: "Bold" }}
+                      className="category"
+                    >
+                      {item.days}
+                    </span>
+                    <a href={msg}>
+                      <button
+                        style={{
+                          backgroundColor: "#050f6b",
+                          padding: "10px 25px",
+                          borderRadius: "5px",
+                          border: "none",
+                          color: "white",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Query?
+                      </button>
+                    </a>
+                  </div>
+                </Card>
+              );
+            })}
           </Carousel>
           <TourButton>
             <ViewButton to="/tour">View More</ViewButton>
@@ -129,17 +130,17 @@ const RecommendedTour = styled.div`
   color: #03367e;
   margin-top: 20px;
   margin-bottom: -50px;
-  h1{
+  h1 {
     @media (max-width: 768px) {
-    text-align:center
-  }
+      text-align: center;
+    }
   }
 `;
 
 const TourParent = styled.div`
-    width: 80%;
-    margin: 100px auto;
-    @media (max-width: 768px) {
+  width: 80%;
+  margin: 100px auto;
+  @media (max-width: 768px) {
     width: 90%;
   }
 `;
@@ -156,9 +157,12 @@ const Card = styled.div`
   display:flex;
   flex-direction:column;
   border-bottom:7px solid #03367e;
+  border-top:none;
+  border-left:none;
+  border-right:none;
   justify-content:space-between;
   overflow: hidden;
-  ${'' /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */}
+  ${"" /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */}
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 500px;
   margin: 20px !important;

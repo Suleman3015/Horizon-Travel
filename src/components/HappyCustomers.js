@@ -89,6 +89,9 @@ const StyledHappyCustomers = styled(motion.div)`
       @media (min-width: 768px) {
         font-size: 2xl;
       }
+      @media (max-width: 408px) {
+        line-height:25px
+      }
     }
 
     .flex-container {

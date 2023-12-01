@@ -8,24 +8,32 @@ import Umrah from "../Images/postBanner/umrah.jpg"
 
 export const TourBannerStatic = [
     {
-        frontimage:Dubai,
+        id:0,
+        frontImage:Dubai,
         backImage:DubaiBack,
-        text:"hello"
+        text:"hello",
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
-        frontimage:Azerbaijan,
+        id:1,
+        frontImage:Azerbaijan,
         backImage:AzerbaijanBack,
-        text:"hello"
+        text:"hello",
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
-        frontimage:Hunza,
+        id:2,
+        frontImage:Hunza,
         backImage:Hunza,
-        text:"hello"
+        text:"hello",
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
-        frontimage:Umrah,
+        id:3,
+        frontImage:Umrah,
         backImage:Umrah,
-        text:"hello"
+        text:"hello",
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     }
 
 
