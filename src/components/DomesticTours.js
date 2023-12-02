@@ -10,7 +10,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function DomesticTours() {
-  const [defaultImage, setDefaultImage] = useState({});
+  // const [defaultImage, setDefaultImage] = useState({});
 
   const responsive = {
     superLargeDesktop: {
@@ -32,13 +32,13 @@ function DomesticTours() {
     },
   };
 
-  const handleErrorImage = (data) => {
-    setDefaultImage((prev) => ({
-      ...prev,
-      [data.target.alt]: data.target.alt,
-      linkDefault: ErrorImg,
-    }));
-  };
+  // const handleErrorImage = (data) => {
+  //   setDefaultImage((prev) => ({
+  //     ...prev,
+  //     [data.target.alt]: data.target.alt,
+  //     linkDefault: ErrorImg,
+  //   }));
+  // };
 
   return (
     <TourParent>
@@ -64,7 +64,7 @@ function DomesticTours() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    onError={handleErrorImage}
+                    // onError={handleErrorImage}
                   />
                   <div
                     style={{

@@ -1,34 +1,23 @@
-import React,{useEffect} from "react";
-import Cards from "../../components/Cards";
+import React, { useEffect } from "react";
 import Heading from "../../components/Heading";
 import styled from "styled-components";
-import { DomesticTourStatic } from "../../static/domesticTour";
-
+import { InternationalToursStatic } from "../../static/internationTour";
 export default function AllTour() {
-  // const handleErrorImage = (data) => {
-  //   setDefaultImage((prev) => ({
-  //     ...prev,
-  //     [data.target.alt]: data.target.alt,
-  //     linkDefault: ErrorImg,
-  //   }));
-  // };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // The empty dependency array ensures that this effect runs only once, equivalent to componentDidMount
-
 
   return (
     <>
       <div style={{ padding: "2rem 0" }}>
         <Heading
-          title={"National Tours"}
+          title={"International Tours"}
           bigTitle={"Discover with Horizon Travels"}
           description={``}
         />
         {/* <Cards /> */}
         <BoxMain>
-          {DomesticTourStatic.map((item) => {
+          {InternationalToursStatic.map((item) => {
             const message = `Hi i am interested in ${item.days} ${item.title} Tour.`;
             const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
             return (
@@ -91,24 +80,6 @@ export default function AllTour() {
                         Query?
                       </button>
                     </a>
-                    <a
-                      href={item.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button
-                        style={{
-                          backgroundColor: "#f2892c",
-                          padding: "10px 25px",
-                          borderRadius: "5px",
-                          border: "none",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Plan?
-                      </button>
-                    </a>
                   </div>
                 </div>
               </Card>
@@ -127,11 +98,9 @@ const BoxMain = styled.div`
   grid-template-columns: 33% 33% 33%;
   @media (max-width: 1250px) {
     grid-template-columns: 50% 50%;
-
   }
   @media (max-width: 768px) {
     grid-template-columns: 100%;
-
   }
 `;
 

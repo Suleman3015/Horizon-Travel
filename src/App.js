@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Whatsapp from "./Images/svgs/whatsapp.svg";
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
+import InternationalTours from "./pages/International/InternationalTous";
 
 const pulse = keyframes`
   0% {
@@ -22,7 +23,7 @@ const AnimatedWhatsappLogo = styled.div`
   z-index: 20;
   right: 20px;
   bottom: 20px;
-  border: 2px solid #050F6B;
+  border: 2px solid #050f6b;
   border-radius: 50%;
   animation: ${pulse} 1.5s infinite;
 `;
@@ -41,14 +42,19 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/tour" element={<AllTour />} />
+          <Route exact path="/international" element={<InternationalTours />} />
         </Routes>
         <Footer />
       </Router>
       {/* <GlobalStyle /> */}
 
       <AnimatedWhatsappLogo>
-         <a href={`https://api.whatsapp.com/send?phone=923122975541`} target="_blank" rel="noopener noreferrer">
-        <LogoImage src={Whatsapp} alt="horizon whatsapp" />
+        <a
+          href={`https://api.whatsapp.com/send?phone=923122975541`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LogoImage src={Whatsapp} alt="horizon whatsapp" />
         </a>
       </AnimatedWhatsappLogo>
     </div>

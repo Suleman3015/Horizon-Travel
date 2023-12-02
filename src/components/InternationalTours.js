@@ -11,7 +11,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function InternationalTours() {
-  const [defaultImage, setDefaultImage] = useState({});
+  // const [defaultImage, setDefaultImage] = useState({});
 
   const responsive = {
     superLargeDesktop: {
@@ -33,13 +33,13 @@ function InternationalTours() {
     },
   };
 
-  const handleErrorImage = (data) => {
-    setDefaultImage((prev) => ({
-      ...prev,
-      [data.target.alt]: data.target.alt,
-      linkDefault: ErrorImg,
-    }));
-  };
+  // const handleErrorImage = (data) => {
+  //   setDefaultImage((prev) => ({
+  //     ...prev,
+  //     [data.target.alt]: data.target.alt,
+  //     linkDefault: ErrorImg,
+  //   }));
+  // };
 
   return (
     <TourParent>
@@ -66,7 +66,7 @@ function InternationalTours() {
                     <img
                       src={item.img}
                       alt={item.title}
-                      onError={handleErrorImage}
+                      // onError={handleErrorImage}
                     />
                     <div
                       style={{
@@ -117,7 +117,7 @@ function InternationalTours() {
             })}
           </Carousel>
           <TourButton>
-            <ViewButton to="/tour">View More</ViewButton>
+            <ViewButton to="/international">View More</ViewButton>
           </TourButton>
         </StyledCardSlider>
       </Fade>
