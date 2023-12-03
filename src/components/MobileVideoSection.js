@@ -102,7 +102,7 @@ const LeftBox = styled.div`
     width:100%
   }
   h1 {
-    width: 30%;
+    width: 80%;
     font-size: 4rem;
     font-weight: bolder;
     color: rgb(214 104 6);

@@ -5,15 +5,16 @@ import Hunza from "../Images/Hunza.jpg";
 import Islamabad from "../Images/Islamabad.jpg";
 import Kashmir from "../Images/Kashmir.jpg";
 import Swat from "../Images/Swat.jpg";
+import { placesData } from "../static/topAttraction";
 
-const placesData = [
-  { name: "Hunza", image: Hunza },
-  { name: "Islamabad", image: Islamabad },
-  { name: "Kashmir", image: Kashmir },
-  { name: "Swat", image: Swat },
-  { name: "Swat", image: Swat },
-  { name: "Swat", image: Swat },
-];
+// const placesData = [
+//   { name: "Hunza", image: Hunza },
+//   { name: "Islamabad", image: Islamabad },
+//   { name: "Kashmir", image: Kashmir },
+//   { name: "Swat", image: Swat },
+//   { name: "Swat", image: Swat },
+//   { name: "Swat", image: Swat },
+// ];
 
 const Cards = () => {
   const ref = useRef(null);

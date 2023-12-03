@@ -22,7 +22,13 @@ const Banner = () => {
             adventure.
           </Description>
           <div style={{ marginTop: "48px" }}>
-            <StyledLink to="#">GET IN TOUCH</StyledLink>
+          <a
+          href={`https://api.whatsapp.com/send?phone=923122975541`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+            <StyledLink>GET IN TOUCH</StyledLink>
+            </a>
           </div>
         </Container>
       </motion.div>

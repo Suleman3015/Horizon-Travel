@@ -23,8 +23,10 @@ export default function Footer() {
               About Us
             </Typography>
             <Typography variant="body2" color="text.secondary.light">
-              We are XYZ company, dedicated to providing the best service to our
-              customers.
+              Our team of seasoned travel experts is
+              dedicated to curating bespoke itineraries that resonate with your
+              unique preferences, interests, and aspirations we have the
+              expertise to tailor each trip to suit your individual needs.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -35,30 +37,30 @@ export default function Footer() {
               123 Main Street, Anytown, USA
             </Typography>
             <Typography variant="body2" color="text.secondary.light">
-              Email: info@example.com
+              Email: waleed.fahmid.01@gmai.com
             </Typography>
             <Typography variant="body2" color="text.secondary.light">
-              Phone: +1 234 567 8901
+              Phone: +92 3122775541
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="#f48431" gutterBottom>
               Follow Us
             </Typography>
-            <Link href="https://www.facebook.com/" target="_blank" color="#fff">
+            <Link href="https://www.facebook.com/profile.php?id=100095119857443&mibextid=ZbWKwL" target="_blank" color="#fff">
               <Facebook />
             </Link>
             <Link
               target="_blank"
-              href="https://www.instagram.com/"
+              href="https://instagram.com/the_horizon_travels?igshid=NzZlODBkYWE4Ng==/"
               color="#fff"
               sx={{ pl: 1, pr: 1 }}
             >
               <Instagram />
             </Link>
-            <Link target="_blank" href="https://www.twitter.com/" color="#fff">
+            {/* <Link target="_blank" href="https://www.twitter.com/" color="#fff">
               <Twitter />
-            </Link>
+            </Link> */}
           </Grid>
         </Grid>
         <Box mt={5}>

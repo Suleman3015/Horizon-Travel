@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import {
   Drawer,
   IconButton,
@@ -9,47 +10,49 @@ import {
 } from "@mui/material";
 import HorizonLogo from "../Images/logo.jpg";
 import MenuIcon from "@mui/icons-material/Menu";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import CallIcon from "@mui/icons-material/Call";
+import { NavLink } from "react-router-dom";
+
 
 // const pages = ["Tours", "Services", "About Us", "Contact Us"];
+
+const StyledNavLink = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+
+  ${
+    "" /* &:hover,
+  &:active {
+    color: #f48431;
+  } */
+  }
+`;
+
+
 const pages = [
   {
     page: "Home",
     url: "/",
-    drop: false,
   },
   {
-    page: "Tours",
-    url: "/",
-    drop: true,
-    menu: [
-      { title: "National", url: "/" },
-      { title: "International", url: "/" },
-    ],
+    page: "International Tours",
+    url: "/international",
   },
   {
-    page: "About us",
-    drop: false,
-    url: "/",
-  },
-  {
-    page: "Contact Us",
-    url: "/",
-    drop: false,
+    page: "National Tours",
+    url: "/tour",
   },
 ];
 const DrawerComp = ({ setDrawState }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   const [openDrawer, setOpenDrawer] = useState(false);
-  setDrawState(openDrawer);
+  const HandleClick = () => {
+    setOpenDrawer(false);
+  };
+
 
   return (
     <React.Fragment>
@@ -64,8 +67,12 @@ const DrawerComp = ({ setDrawState }) => {
             display: "flex",
             flexDirection: "column",
             backgroundColor: "#F5F5F5",
+            justifyContent:"space-between",
+            height:"100%",
+            paddingBottom:"22px"
           }}
         >
+        <div>
           <div
             style={{
               display: "flex",
@@ -84,57 +91,56 @@ const DrawerComp = ({ setDrawState }) => {
           <List>
             {pages.map((page, index) => (
               <>
-                {" "}
-                {page.drop === true ? (
-                  <div key={index}>
-                    <ListItemButton
-                      key={index}
-                      id="demo-positioned-button"
-                      aria-controls={open ? "demo-positioned-menu" : undefined}
-                      aria-haspopup="true"
-                      aria-expanded={open ? "true" : undefined}
-                      onClick={handleClick}
-                      sx={{ color: "black" }}
-                    >
-                      Dashboard
-                    </ListItemButton>
-                    <Menu
-                      id="demo-positioned-menu"
-                      aria-labelledby="demo-positioned-button"
-                      anchorEl={anchorEl}
-                      open={open}
-                      onClose={handleClose}
-                      anchorOrigin={{
-                        vertical: "top",
-                        horizontal: "left",
-                      }}
-                      transformOrigin={{
-                        vertical: "top",
-                        horizontal: "left",
-                      }}
-                    >
-                      {page.menu.map((title, index) => {
-                        return (
-                          <ListItemButton onClick={handleClose} key={index}>
-                          <ListItemIcon >
-                            <ListItemText>{title.title}</ListItemText>
-                          </ListItemIcon>
-                          </ListItemButton>
-
-                        );
-                      })}
-                    </Menu>
-                  </div>
-                ) : (
-                  <ListItemButton key={index}>
+                <Link to={page.url}>
+                  <ListItemButton onClick={HandleClick} key={index}>
                     <ListItemIcon>
                       <ListItemText>{page.page}</ListItemText>
                     </ListItemIcon>
                   </ListItemButton>
-                )}
+                  {/* )} */}
+                </Link>
               </>
             ))}
           </List>
+          </div>
+          <div>
+                <StyledNavLink to="https://www.facebook.com/profile.php?id=100095119857443&mibextid=ZbWKwL">
+                  <FacebookIcon
+                    sx={{
+                      color: "darkgray",
+                      fontWeight:"bolder",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                    }}
+                    variant="contained"
+                  />
+                </StyledNavLink>
+
+                <StyledNavLink to="https://instagram.com/the_horizon_travels?igshid=NzZlODBkYWE4Ng==">
+                  <InstagramIcon
+                    sx={{
+                      color: "darkgray",
+                      fontWeight:"bolder",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                    }}
+                    variant="contained"
+                  />
+                </StyledNavLink>
+                {/* <StyledNavLink to="/"> */}
+                  <a href={`tel:+923122775541`}>
+                  <CallIcon
+                    sx={{
+                      color: "darkgray",
+                      fontWeight:"bolder",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                    }}
+                    variant="contained"
+                  />
+                {/* </StyledNavLink> */}
+                </a>
+              </div>
           {/* <h1>hello world</h1> */}
         </div>
       </Drawer>

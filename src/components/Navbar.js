@@ -7,27 +7,34 @@ import {
   Toolbar,
   useMediaQuery,
   useTheme,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
   Typography,
+  // ListItemButton,
+  // ListItemIcon,
+  // ListItemText,
+  // Typography,
 } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import CallIcon from "@mui/icons-material/Call";
 import DrawerComp from "./Drawer";
-import Menu from "@mui/material/Menu";
-import { Link } from "react-router-dom";
-import CommuteSharpIcon from "@mui/icons-material/CommuteSharp";
+// import Menu from "@mui/material/Menu";
+import { Link, useLocation } from "react-router-dom";
+import HomeSharpIcon from "@mui/icons-material/HomeSharp";
+import DirectionsTransitSharpIcon from "@mui/icons-material/DirectionsTransitSharp";
+import ConnectingAirportsSharpIcon from "@mui/icons-material/ConnectingAirportsSharp";
 import PublicSharpIcon from "@mui/icons-material/PublicSharp";
+import { Link as LINK } from "react-scroll";
 
-import { Link as LINK, Element } from "react-scroll";
 const Navbar = () => {
   const [value, setValue] = useState();
+  const location = useLocation();
+  const currentPath = location.pathname;
+  // Define your color condition based on the current route
+  const navbarColor = currentPath === "/" ? " rgba(6, 6, 6, 0.35)" : "#074090";
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   const [drawState, setDrawState] = useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -43,7 +50,7 @@ const Navbar = () => {
           // background: "transparent",
           position: "absolute",
           /* From https://css.glass */
-          background: " rgba(6, 6, 6, 0.35)",
+          background: navbarColor,
           // borderRadius: "16px",
           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
           backdropFilter: " blur(12.7px)",
@@ -78,15 +85,23 @@ const Navbar = () => {
                 </a>
               </div>
 
-              <div>
-                <Link to="/">
-                  <Tab
-                    sx={{ color: "white", fontWeight: "bolder" }}
-                    to="/"
-                    label="Home"
-                  />
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "25px" }}
+              >
+                <Link style={{ cursor: "pointer" }} to="/">
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      gap: "3px",
+                      alignItems: "center",
+                      color: "lightgray",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <HomeSharpIcon style={{ fontSize: "20px" }} /> Home
+                  </Typography>
                 </Link>
-                <Tab
+                {/* <Tab
                   id="demo-positioned-button"
                   aria-controls={open ? "demo-positioned-menu" : undefined}
                   aria-haspopup="true"
@@ -122,51 +137,116 @@ const Navbar = () => {
                     },
                   }}
                 >
-                  <ListItemButton onClick={handleClose}>
-                    <ListItemIcon sx={{ color: "white" }}>
+                  <Link to="/tour">
+                    <ListItemButton onClick={handleClose}>
+                      <ListItemIcon sx={{ color: "white" }}>
+                        <Typography
+                          sx={{
+                            color: "lightgray",
+                            fontWeight: "bolder",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                          }}
+                        >
+                          <PublicSharpIcon
+                            sx={
+                              {
+                                // color: "#050f6b",
+                              }
+                            }
+                          />
+                          INTERNATIONAL TOURS
+                        </Typography>
+                      </ListItemIcon>
+                    </ListItemButton>
+                  </Link>
+                  <Link to="/international">
+                    <ListItemButton onClick={handleClose}>
                       <Typography
                         sx={{
                           color: "white",
                           display: "flex",
+                          color: "lightgray",
+                          fontWeight: "bolder",
                           alignItems: "center",
-                          gap: "5px",
+                          gap: "10px",
                         }}
                       >
-                        <PublicSharpIcon />
-                        International Tours
+                        <CommuteSharpIcon
+                          sx={
+                            {
+                              // color: "#050f6b",
+                            }
+                          }
+                        />{" "}
+                        NATIONAL TOURS
                       </Typography>
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton onClick={handleClose}>
-                    <Typography sx={{ color: "white" }}>
-                      <CommuteSharpIcon
-                        sx={{
-                          color: "white",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "5px",
-                        }}
-                      />{" "}
-                      National Tours
+                    </ListItemButton>
+                  </Link>
+                </Menu> */}
+                <Link to="/tour">
+                  <Typography
+                    sx={{
+                      display: "flex",
+                      gap: "3px",
+                      alignItems: "center",
+                      color: "white",
+                      color: "lightgray",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <DirectionsTransitSharpIcon style={{ fontSize: "20px" }} />{" "}
+                    National Tours
+                  </Typography>
+                </Link>
+                <Link to="/international" smooth={true} duration={500}>
+                  <Typography
+                    sx={{
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "3px",
+                      color: "lightgray",
+                      fontWeight: "bolder",
+                    }}
+                  >
+                    <ConnectingAirportsSharpIcon style={{ fontSize: "20px" }} />{" "}
+                    International Tours
+                  </Typography>
+                </Link>
+                {currentPath == "/" ? (
+                  <LINK
+                    style={{ cursor: "pointer" }}
+                    to="section1"
+                    smooth={true}
+                    duration={500}
+                  >
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        gap: "3px",
+                        color: "white",
+                        alignItems: "center",
+                        color: "lightgray",
+                        fontWeight: "bolder",
+                      }}
+                    >
+                      <PublicSharpIcon style={{ fontSize: "20px" }} /> About
                     </Typography>
-                  </ListItemButton>
-                </Menu>
-                <LINK to="section1" smooth={true} duration={500}>
-                  <Tab
-                    sx={{ color: "white", fontWeight: "bolder" }}
-                    label="About Us"
-                  />
-                </LINK>
-                <Link to="/international">
+                  </LINK>
+                ) : null}
+
+                {/* <Link to="/international">
                   <Tab
                     sx={{ color: "white", fontWeight: "bolder" }}
                     label="Contact"
                   />
-                </Link>
+                </Link> */}
               </div>
 
               <div>
-                <StyledNavLink to="/">
+                <StyledNavLink to="https://www.facebook.com/profile.php?id=100095119857443&mibextid=ZbWKwL">
                   <FacebookIcon
                     sx={{
                       color: "White",
@@ -177,7 +257,7 @@ const Navbar = () => {
                   />
                 </StyledNavLink>
 
-                <StyledNavLink to="/">
+                <StyledNavLink to="https://instagram.com/the_horizon_travels?igshid=NzZlODBkYWE4Ng==">
                   <InstagramIcon
                     sx={{
                       color: "White",
@@ -187,7 +267,7 @@ const Navbar = () => {
                     variant="contained"
                   />
                 </StyledNavLink>
-                <StyledNavLink to="/">
+                <a href={`tel:+923122775541`}>
                   <CallIcon
                     sx={{
                       color: "White",
@@ -196,7 +276,7 @@ const Navbar = () => {
                     }}
                     variant="contained"
                   />
-                </StyledNavLink>
+                </a>
               </div>
             </NavWrap>
           )}
