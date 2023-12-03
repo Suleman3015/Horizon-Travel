@@ -1,13 +1,9 @@
-import Hunza from "../Images/Hunza.jpg";
-import Islamabad from "../Images/Islamabad.jpg";
-import Kashmir from "../Images/Kashmir.jpg";
-import Swat from "../Images/Swat.jpg";
 
 export const placesData = [
-  { name: "Hunza", image: Hunza },
-  { name: "swat", image: Islamabad },
-  { name: "Naltar", image: Kashmir },
-  { name: "Kashmir", image: Swat },
-  { name: "Shogran", image: Swat },
-  { name: "Naran", image: Swat },
+  { name: "Hunza", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/hunza.jpg" },
+  { name: "swat", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/swat.jpg"},
+  { name: "Naltar", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/naltar.jpg" },
+  { name: "Kashmir", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/kashmir.jpg" },
+  { name: "Shogran", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/shogran.jpg"},
+  { name: "Naran", image: "https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/top%20attractions/naran.jpg" },
 ];

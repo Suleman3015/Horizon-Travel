@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion, useInView } from "framer-motion";
-import Hunza from "../Images/Hunza.jpg";
-import Islamabad from "../Images/Islamabad.jpg";
-import Kashmir from "../Images/Kashmir.jpg";
-import Swat from "../Images/Swat.jpg";
+
 import { placesData } from "../static/topAttraction";
 
 // const placesData = [
@@ -64,7 +61,7 @@ const StyledSection = styled.section`
   display: grid;
   max-width: 1200px;
   margin-inline: auto;
-  padding-inline: 24px;
+  ${'' /* padding-inline: 24px; */}
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 `;
@@ -77,13 +74,18 @@ const StyledArticle = styled.article`
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  height:fit-content;
+
 `;
 
 const StyledFigure = styled.figure`
   margin: 0;
   padding: 0;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-top: 66.6666%; /* You can adjust this value based on your desired aspect ratio */
+  
   .Heading {
     position: absolute;
     top: 50%;
@@ -98,18 +100,37 @@ const StyledFigure = styled.figure`
   }
 `;
 
+// const StyledImg = styled.img`
+//   max-width: 100%;
+//   transform-origin: center;
+//   object-fit:cover;
+//   transform: scale(var(--img-scale));
+//   transition: transform 0.4s ease-in-out;
+
+
+
+//   ${StyledArticle}:hover & {
+//     --img-scale: 1.1;
+//     --link-icon-translate: 0;
+//     --link-icon-opacity: 1;
+//     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+//       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+//   }
+// `;
+
+
 const StyledImg = styled.img`
-  max-width: 100%;
-  transform-origin: center;
-  transform: scale(var(--img-scale));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.4s ease-in-out;
 
   ${StyledArticle}:hover & {
-    --img-scale: 1.1;
-    --link-icon-translate: 0;
-    --link-icon-opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transform: scale(1.1);
+    /* Add other hover styles if needed */
   }
 `;
 
