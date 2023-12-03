@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Air from "../Images/svgs/airplane.svg";
-import  { createGlobalStyle, keyframes } from 'styled-components';
+import  {  keyframes } from 'styled-components';
 
 
 

@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { DomesticTourStatic } from "../static/domesticTour";
-import ErrorImg from "../Images/logo.jpg";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
@@ -10,11 +9,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 function DomesticTours() {
-  // const [defaultImage, setDefaultImage] = useState({});
-
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -32,14 +28,6 @@ function DomesticTours() {
     },
   };
 
-  // const handleErrorImage = (data) => {
-  //   setDefaultImage((prev) => ({
-  //     ...prev,
-  //     [data.target.alt]: data.target.alt,
-  //     linkDefault: ErrorImg,
-  //   }));
-  // };
-
   return (
     <TourParent>
       <Fade>
@@ -49,85 +37,95 @@ function DomesticTours() {
         <StyledCardSlider>
           <Carousel responsive={responsive}>
             {DomesticTourStatic.map((item) => {
-              const message= `Hi i am interested in ${item.days} ${item.title} Tour.`
-              const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
-              return (<Card
-                style={{
-                  margin: "30px 0px",
-                }}
-                key={item.id}
-              >
-                <div className="productsPageSavings">
-                  <p>30% Off</p>
-                </div>
-                <div className="card-top">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    // onError={handleErrorImage}
-                  />
-                  <div
+              if (item.feature) {
+                const message = `Hi i am interested in ${item.days} ${item.title} Tour.`;
+                const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
+                return (
+                  <Card
                     style={{
-                      display: "flex",
-                      width: "95%",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      padding: "0px 10px",
-                      marginTop: "10px",
+                      margin: "30px 0px",
                     }}
+                    key={item.id}
                   >
-                    <p
-                      style={{
-                        color: "black",
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {item.title}
-                    </p>
-                    <h3 style={{ color: "#03367e" }}>{item.price}</h3>
-                  </div>
-                </div>
-                <div className="card-bottom">
-                  <span
-                    style={{ color: "gray", fontWeight: "Bold" }}
-                    className="category"
-                  >
-                    {item.days}
-                  </span>
-                  <div style={{display:"flex"}}>
-                  <a href={msg}>
-                    <button
-                      style={{
-                        backgroundColor: "#050f6b",
-                        padding: "10px 25px",
-                        borderRadius: "5px",
-                        border: "none",
-                        color: "white",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Query?
-                    </button>
-                  </a>
-                  <a href={item.pdf} target="_blank" rel="noopener noreferrer">
-                    <button
-                      style={{
-                        backgroundColor: "#f2892c",
-                        padding: "10px 25px",
-                        borderRadius: "5px",
-                        border: "none",
-                        color: "white",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Plan?
-                    </button>
-                  </a>
-                  </div>
-                </div>
-              </Card>
-            )})}
+                    <div className="productsPageSavings">
+                      <p>30% Off</p>
+                    </div>
+                    <div className="card-top">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        // onError={handleErrorImage}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "95%",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          padding: "0px 10px",
+                          marginTop: "10px",
+                        }}
+                      >
+                        <p
+                          style={{
+                            color: "black",
+                            fontSize: "20px",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          {item.title}
+                        </p>
+                        <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+                      </div>
+                    </div>
+                    <div className="card-bottom">
+                      <span
+                        style={{ color: "gray", fontWeight: "Bold" }}
+                        className="category"
+                      >
+                        {item.days}
+                      </span>
+                      <div style={{ display: "flex" }}>
+                        <a href={msg}>
+                          <button
+                            style={{
+                              backgroundColor: "#050f6b",
+                              padding: "10px 25px",
+                              borderRadius: "5px",
+                              border: "none",
+                              color: "white",
+                              cursor: "pointer",
+                            }}
+                          >
+                            Query?
+                          </button>
+                        </a>
+                        <a
+                          href={item.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <button
+                            style={{
+                              backgroundColor: "#f2892c",
+                              padding: "10px 25px",
+                              borderRadius: "5px",
+                              border: "none",
+                              color: "white",
+                              cursor: "pointer",
+                            }}
+                          >
+                            Plan?
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              } else {
+                return null;
+              }
+            })}
           </Carousel>
           <TourButton>
             <ViewButton to="/tour">View More</ViewButton>

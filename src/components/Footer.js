@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Facebook, Instagram } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
             <Typography variant="h6" color="#f48431" gutterBottom>
               About Us
             </Typography>
-            <Typography variant="body2" color="text.secondary.light">
+            <Typography style={{lineHeight:"22px"}} variant="body2" color="text.secondary.light">
               Our team of seasoned travel experts is
               dedicated to curating bespoke itineraries that resonate with your
               unique preferences, interests, and aspirations we have the
@@ -33,9 +33,9 @@ export default function Footer() {
             <Typography variant="h6" color="#f48431" gutterBottom>
               Contact Us
             </Typography>
-            <Typography variant="body2" color="text.secondary.light">
+            {/* <Typography variant="body2" color="text.secondary.light">
               123 Main Street, Anytown, USA
-            </Typography>
+            </Typography> */}
             <Typography variant="body2" color="text.secondary.light">
               Email: waleed.fahmid.01@gmai.com
             </Typography>

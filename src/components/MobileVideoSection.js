@@ -9,35 +9,46 @@ function MobileVideoSection() {
   const videoRef = useRef(null);
   const [userInteracted, setUserInteracted] = useState(false);
 
-  const handleScroll = () => {
-    const video = videoRef.current;
-
-    // Check if the video is in the viewport
-    const rect = video.getBoundingClientRect();
-    const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-    // Autoplay the video if it's in the viewport and the user has interacted
-    if (isInViewport && userInteracted) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const video = videoRef.current;
+      // Check if the video is in the viewport
+      const rect = video.getBoundingClientRect();
+      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  
+      // Autoplay the video if it's in the viewport and the user has interacted
+      if (isInViewport && userInteracted) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    };
+  
+    // Attach the event listener
+    window.addEventListener('scroll', handleScroll);
+  
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  
+    // Dependencies array is empty to ensure the effect runs once on mount
+  }, [userInteracted]);
 
   const handleUserInteraction = () => {
     // Set the userInteracted state to true when the user interacts with the video
     setUserInteracted(true);
   };
 
-  useEffect(() => {
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   // Add scroll event listener
+  //   window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [userInteracted]);
+  //   // Clean up the event listener when the component is unmounted
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [userInteracted,handleScroll]);
 
   return (
     <MobileVidMain onClick={handleUserInteraction}>

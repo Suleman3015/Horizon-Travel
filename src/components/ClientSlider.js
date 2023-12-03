@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { IoIosQuote } from "react-icons/io";
-import { AiOutlineStar } from "react-icons/ai";
+import Rating from '@mui/material/Rating';
 
 const ClientSlider = (props) => {
-  const { name, position, img_url, stars, disc } = props.item;
+  const { name, img_url, stars, disc } = props.item;
   return (
     <Container>
       <Header>
@@ -12,13 +12,8 @@ const ClientSlider = (props) => {
           <IoIosQuote />
         </span>
         <div>
-          {Array(stars)
-            .fill()
-            .map((_, i) => (
-              <span className="star" key={i}>
-                <AiOutlineStar />
-              </span>
-            ))}
+        
+            <Rating name="read-only" value={stars} readOnly />
         </div>
       </Header>
       <Body>{disc}</Body>
@@ -26,7 +21,7 @@ const ClientSlider = (props) => {
         <img src={img_url} alt={name} />
         <div className="details">
           <h1>{name}</h1>
-          <p>{position}</p>
+          {/* <p>{position}</p> */}
         </div>
       </Footer>
     </Container>
@@ -39,6 +34,7 @@ const Container = styled.div`
   background-color: #074090;
   padding: 1.5rem 1rem;
   margin: 0 1rem;
+  border-radius:1rem
 `;
 
 const Header = styled.div`
@@ -59,6 +55,7 @@ const Body = styled.p`
   color: white;
   font-size: 0.8rem;
   margin-bottom: 1.5rem;
+  line-height:20px
 `;
 const Footer = styled.div`
   display: flex;
@@ -74,6 +71,7 @@ const Footer = styled.div`
   h1 {
     font-size: 1.2rem;
     font-weight: 700;
+    color:white;
     @media (max-width: 580px) {
       font-size: 1rem;
     }

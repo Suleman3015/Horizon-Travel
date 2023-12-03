@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { InternationalToursStatic } from "../static/internationTour";
-import ErrorImg from "../Images/logo.jpg";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
@@ -50,6 +49,9 @@ function InternationalTours() {
         <StyledCardSlider>
           <Carousel responsive={responsive}>
             {InternationalToursStatic.map((item) => {
+              if(item.feature){
+
+            
               const message= `Hi i am interested in ${item.days} ${item.title} Tour.`
               const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
               return (
@@ -114,6 +116,9 @@ function InternationalTours() {
                   </div>
                 </Card>
               );
+            }else{
+              return null
+            }
             })}
           </Carousel>
           <TourButton>

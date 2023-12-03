@@ -1,17 +1,9 @@
 import React,{useEffect} from "react";
-import Cards from "../../components/Cards";
 import Heading from "../../components/Heading";
 import styled from "styled-components";
 import { DomesticTourStatic } from "../../static/domesticTour";
 
 export default function AllTour() {
-  // const handleErrorImage = (data) => {
-  //   setDefaultImage((prev) => ({
-  //     ...prev,
-  //     [data.target.alt]: data.target.alt,
-  //     linkDefault: ErrorImg,
-  //   }));
-  // };
 
   useEffect(() => {
     window.scrollTo(0, 0);

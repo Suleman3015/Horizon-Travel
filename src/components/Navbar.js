@@ -1,23 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import {
   AppBar,
-  Tab,
   Toolbar,
   useMediaQuery,
   useTheme,
   Typography,
-  // ListItemButton,
-  // ListItemIcon,
-  // ListItemText,
-  // Typography,
 } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import CallIcon from "@mui/icons-material/Call";
 import DrawerComp from "./Drawer";
-// import Menu from "@mui/material/Menu";
 import { Link, useLocation } from "react-router-dom";
 import HomeSharpIcon from "@mui/icons-material/HomeSharp";
 import DirectionsTransitSharpIcon from "@mui/icons-material/DirectionsTransitSharp";
@@ -26,22 +20,18 @@ import PublicSharpIcon from "@mui/icons-material/PublicSharp";
 import { Link as LINK } from "react-scroll";
 
 const Navbar = () => {
-  const [value, setValue] = useState();
   const location = useLocation();
   const currentPath = location.pathname;
-  // Define your color condition based on the current route
   const navbarColor = currentPath === "/" ? " rgba(6, 6, 6, 0.35)" : "#074090";
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  const [drawState, setDrawState] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const [anchorEl, setAnchorEl] = useState(null);
+  // const handleClick = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   return (
     <React.Fragment>
@@ -70,7 +60,7 @@ const Navbar = () => {
                   />
                 </a>
               </div>
-              <DrawerComp setDrawState={setDrawState} />
+              <DrawerComp />
             </NavWrap>
           ) : (
             <NavWrap>
@@ -191,7 +181,7 @@ const Navbar = () => {
                       display: "flex",
                       gap: "3px",
                       alignItems: "center",
-                      color: "white",
+                      // color: "white",
                       color: "lightgray",
                       fontWeight: "bolder",
                     }}
@@ -203,7 +193,7 @@ const Navbar = () => {
                 <Link to="/international" smooth={true} duration={500}>
                   <Typography
                     sx={{
-                      color: "white",
+                      // color: "white",
                       display: "flex",
                       alignItems: "center",
                       gap: "3px",
@@ -215,7 +205,7 @@ const Navbar = () => {
                     International Tours
                   </Typography>
                 </Link>
-                {currentPath == "/" ? (
+                {currentPath === "/" ? (
                   <LINK
                     style={{ cursor: "pointer" }}
                     to="section1"
@@ -226,7 +216,7 @@ const Navbar = () => {
                       sx={{
                         display: "flex",
                         gap: "3px",
-                        color: "white",
+                        // color: "white",
                         alignItems: "center",
                         color: "lightgray",
                         fontWeight: "bolder",

@@ -47,7 +47,7 @@ const pages = [
     url: "/tour",
   },
 ];
-const DrawerComp = ({ setDrawState }) => {
+const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const HandleClick = () => {
     setOpenDrawer(false);
@@ -63,7 +63,6 @@ const DrawerComp = ({ setDrawState }) => {
       >
         <div
           style={{
-            height: "100%",
             display: "flex",
             flexDirection: "column",
             backgroundColor: "#F5F5F5",
