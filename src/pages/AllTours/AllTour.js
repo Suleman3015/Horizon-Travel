@@ -1,14 +1,12 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Heading from "../../components/Heading";
 import styled from "styled-components";
 import { DomesticTourStatic } from "../../static/domesticTour";
 
 export default function AllTour() {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // The empty dependency array ensures that this effect runs only once, equivalent to componentDidMount
-
 
   return (
     <>
@@ -49,57 +47,22 @@ export default function AllTour() {
                       marginTop: "10px",
                     }}
                   >
-                    <p
-                      style={{
-                        color: "black",
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {item.title}
-                    </p>
-                    <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+                    <TextStyle>{item.title}</TextStyle>
+                    <TextPrice>{item.price}</TextPrice>
                   </div>
                 </div>
                 <div className="card-bottom">
-                  <span
-                    style={{ color: "gray", fontWeight: "Bold" }}
-                    className="category"
-                  >
-                    {item.days}
-                  </span>
+                  <TextSpan className="category">{item.days}</TextSpan>
                   <div style={{ display: "flex" }}>
                     <a href={msg}>
-                      <button
-                        style={{
-                          backgroundColor: "#050f6b",
-                          padding: "10px 25px",
-                          borderRadius: "5px",
-                          border: "none",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Query?
-                      </button>
+                      <ButtonTheme>Query?</ButtonTheme>
                     </a>
                     <a
                       href={item.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button
-                        style={{
-                          backgroundColor: "#f2892c",
-                          padding: "10px 25px",
-                          borderRadius: "5px",
-                          border: "none",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Plan?
-                      </button>
+                      <ButtonThemePlan>Plan?</ButtonThemePlan>
                     </a>
                   </div>
                 </div>
@@ -119,14 +82,60 @@ const BoxMain = styled.div`
   grid-template-columns: 33% 33% 33%;
   @media (max-width: 1250px) {
     grid-template-columns: 50% 50%;
-
   }
   @media (max-width: 768px) {
     grid-template-columns: 100%;
-
+    width:90%;
   }
 `;
 
+const TextStyle = styled.p`
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+   font-size:16px
+  }
+`;
+
+const TextPrice = styled.h3`
+  color: #03367e;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const TextSpan = styled.span`
+ color: gray, 
+ font-weight: bold,
+ @media (max-width: 768px) {
+   font-size:16px
+  }
+`;
+
+const ButtonTheme = styled.button`
+  background-color: #050f6b;
+  padding: 10px 25px;
+  borderradius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const ButtonThemePlan = styled.button`
+  background-color: #f2892c;
+  padding: 10px 25px;
+  borderradius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
 const Card = styled.div`
   border: 1px solid #fff;
   background: white;
@@ -193,5 +202,6 @@ const Card = styled.div`
 
       }
     }
+
   }
 `;

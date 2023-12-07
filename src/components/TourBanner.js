@@ -19,16 +19,17 @@ function TourBanner() {
       breakpoint: { max: 3000, min: 2300 },
       items: 3,
     },
-    smalldesktop: {
-      breakpoint: { max: 1400, min: 1024 },
-      items: 2,
-    },
     desktop: {
       breakpoint: { max: 2300, min: 1400 },
       items: 3,
     },
+    smalldesktop: {
+      breakpoint: { max: 1400, min: 1250 },
+      items: 3,
+    },
+  
     tablet: {
-      breakpoint: { max: 1024, min: 700},
+      breakpoint: { max: 1250, min: 700},
       items: 2,
     },
     mobile: {
@@ -79,6 +80,8 @@ function TourBanner() {
                     style={{
                       width: "100%",
                       height: "100%",
+                      // minHeight:"500px",
+                      // maxHeight:"800px",
                       position: "absolute",
                       backfaceVisibility: "hidden",
                       borderRadius: "15px",
@@ -90,7 +93,9 @@ function TourBanner() {
                     alt={items.alt}
                     style={{
                       width: "100%",
-                      height: "100%",
+                      height:"100%",
+                      // minHeight:"500px",
+                      // maxHeight:"800px",
                       position: "absolute",
                       backfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
@@ -116,8 +121,10 @@ const TourBannerSection = styled.div`
 `;
 const BannerMain = styled.div`
   perspective: 1000px;
-  height: 500px;
-  margin: 30px;
+  height: 550px;
+  margin: 20px;
 `;
+
+
 
 export default TourBanner;

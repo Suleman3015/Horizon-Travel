@@ -13,8 +13,8 @@ function Home() {
   return (
     <div style={{ position: "relative" }}>
       <Banner />
-      <InternationalTours />
       <DomesticTours />
+      <InternationalTours />
       <TourBanner />
       <HappyCustomers />
       <Element name="section1">

@@ -71,6 +71,9 @@ const StyledHappyCustomers = styled(motion.div)`
       font-size: 2.5rem;
       color: black;
       margin-bottom:15px;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
 
       span {
         color: white;
@@ -84,10 +87,10 @@ const StyledHappyCustomers = styled(motion.div)`
       font-family: "Roboto", sans-serif;
       font-weight: bold;
       font-size:18px;
-      marginTop:10px;
+      margin-top:10px;
       line-height:30px;
-      @media (min-width: 768px) {
-        font-size: 2xl;
+      @media (max-width: 768px) {
+        font-size:16px
       }
       @media (max-width: 408px) {
         line-height:25px

@@ -49,76 +49,50 @@ function InternationalTours() {
         <StyledCardSlider>
           <Carousel responsive={responsive}>
             {InternationalToursStatic.map((item) => {
-              if(item.feature){
-
-            
-              const message= `Hi i am interested in ${item.days} ${item.title} Tour.`
-              const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
-              return (
-                <Card
-                  style={{
-                    margin: "30px 0px",
-                  }}
-                  key={item.id}
-                >
-                  <div className="productsPageSavings">
-                    <p>30% Off</p>
-                  </div>
-                  <div className="card-top">
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      // onError={handleErrorImage}
-                    />
-                    <div
-                      style={{
-                        display: "flex",
-                        width: "95%",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        padding: "0px 10px",
-                        marginTop: "10px",
-                      }}
-                    >
-                      <p
-                        style={{
-                          color: "black",
-                          fontSize: "20px",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        {item.title}
-                      </p>
-                      <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+              if (item.feature) {
+                const message = `Hi i am interested in ${item.days} ${item.title} Tour.`;
+                const msg = `https://api.whatsapp.com/send?phone=923122975541&text=${message}`;
+                return (
+                  <Card
+                    style={{
+                      margin: "30px 0px",
+                    }}
+                    key={item.id}
+                  >
+                    <div className="productsPageSavings">
+                      <p>30% Off</p>
                     </div>
-                  </div>
-                  <div className="card-bottom">
-                    <span
-                      style={{ color: "gray", fontWeight: "Bold" }}
-                      className="category"
-                    >
-                      {item.days}
-                    </span>
-                    <a href={msg}>
-                      <button
+                    <div className="card-top">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        // onError={handleErrorImage}
+                      />
+                      <div
                         style={{
-                          backgroundColor: "#050f6b",
-                          padding: "10px 25px",
-                          borderRadius: "5px",
-                          border: "none",
-                          color: "white",
-                          cursor: "pointer",
+                          display: "flex",
+                          width: "95%",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          padding: "0px 10px",
+                          marginTop: "10px",
                         }}
                       >
-                        Query?
-                      </button>
-                    </a>
-                  </div>
-                </Card>
-              );
-            }else{
-              return null
-            }
+                        <TextStyle>{item.title}</TextStyle>
+                        <TextPrice>{item.price}</TextPrice>
+                      </div>
+                    </div>
+                    <div className="card-bottom">
+                      <TextSpan className="category">{item.days}</TextSpan>
+                      <a href={msg}>
+                        <ButtonTheme>Query?</ButtonTheme>
+                      </a>
+                    </div>
+                  </Card>
+                );
+              } else {
+                return null;
+              }
             })}
           </Carousel>
           <TourButton>
@@ -242,6 +216,42 @@ const TourButton = styled.div`
 const ViewButton = styled(NavLink)`
   text-decoration: none;
   color: #ffffff;
+`;
+
+const TextStyle = styled.p`
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const TextPrice = styled.h3`
+  color: #03367e;
+  @media (max-width: 768px) {
+    font-size: 16px !important;
+  }
+`;
+
+const TextSpan = styled.span`
+ color: gray, 
+ font-weight: bold,
+ @media (max-width: 768px) {
+   font-size:16px
+  }
+`;
+
+const ButtonTheme = styled.button`
+  background-color: #050f6b;
+  padding: 10px 25px;
+  borderradius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export default InternationalTours;

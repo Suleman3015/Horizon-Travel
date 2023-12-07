@@ -18,7 +18,12 @@ import DirectionsTransitSharpIcon from "@mui/icons-material/DirectionsTransitSha
 import ConnectingAirportsSharpIcon from "@mui/icons-material/ConnectingAirportsSharp";
 import PublicSharpIcon from "@mui/icons-material/PublicSharp";
 import { Link as LINK } from "react-scroll";
-
+import SubscriptionsSharpIcon from "@mui/icons-material/SubscriptionsSharp";
+import Facebook from "../Images/icons/facebook.svg";
+import Insta from "../Images/icons/instagram.svg";
+import Youtube from "../Images/icons/youtube.svg";
+import Tiktok from "../Images/icons/tiktok.svg";
+import Twitter from "../Images/icons/twitter.svg"
 const Navbar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
@@ -69,7 +74,7 @@ const Navbar = () => {
                   <img
                     style={{ cursor: "pointer" }}
                     src="/LogoTrans.png"
-                    width={100}
+                    width={150}
                     alt="horizon"
                   />
                 </a>
@@ -187,7 +192,7 @@ const Navbar = () => {
                     }}
                   >
                     <DirectionsTransitSharpIcon style={{ fontSize: "20px" }} />{" "}
-                    National Tours
+                   Domestic Tours
                   </Typography>
                 </Link>
                 <Link to="/international" smooth={true} duration={500}>
@@ -235,9 +240,30 @@ const Navbar = () => {
                 </Link> */}
               </div>
 
-              <div>
+              <div style={{
+                display:"flex",
+                alignItems:"center"
+              }}>
                 <StyledNavLink to="https://www.facebook.com/profile.php?id=100095119857443&mibextid=ZbWKwL">
-                  <FacebookIcon
+                  <img
+                    src={Facebook}
+                    height={30}
+                    sx={{
+                      color: "White",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                      color: "#4267B2",
+                    }}
+                    variant="contained"
+                    alt="horizon tavel"
+                  />
+                </StyledNavLink>
+
+                <StyledNavLink to="https://instagram.com/the_horizon_travels?igshid=NzZlODBkYWE4Ng==">
+                  <img 
+                      height={30}
+                  src={Insta}
+                  alt="horizon"
                     sx={{
                       color: "White",
                       opacity: "90%",
@@ -247,26 +273,65 @@ const Navbar = () => {
                   />
                 </StyledNavLink>
 
-                <StyledNavLink to="https://instagram.com/the_horizon_travels?igshid=NzZlODBkYWE4Ng==">
-                  <InstagramIcon
+                <StyledNavLink to="https://www.tiktok.com/@horizon4547?_t=8hw54yO9O1o&_r=1">
+                  <img
+                      height={33}
+                    src={Tiktok}
+                    alt="horizon tavel"
                     sx={{
                       color: "White",
                       opacity: "90%",
                       marginLeft: "10px",
+                      color: "#CD201F",
                     }}
                     variant="contained"
                   />
                 </StyledNavLink>
-                <a href={`tel:+923122775541`}>
-                  <CallIcon
+
+                <StyledNavLink to="https://www.youtube.com/channel/UCl8gPd_8p_Tdo72FbqqUMHg">
+                  <img
+                      height={30}
+                    src={Youtube}
+                    alt="horizon tavel"
                     sx={{
                       color: "White",
                       opacity: "90%",
                       marginLeft: "10px",
+                      color: "#CD201F",
                     }}
                     variant="contained"
                   />
-                </a>
+                </StyledNavLink>
+
+                <StyledNavLink to="https://twitter.com/Horizontravel23">
+                  <img
+                      height={30}
+                    src={Twitter}
+                    alt="horizon tavel"
+                    sx={{
+                      color: "White",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                      color: "#CD201F",
+                    }}
+                    variant="contained"
+                  />
+                </StyledNavLink>
+            
+                {/* <a href={`tel:+923122775541`}>
+                  <CallIcon
+                      // height={30}
+                    alt="horizon tavel"
+                    src={Ph}
+                    sx={{
+                      color: "White",
+                      opacity: "90%",
+                      marginLeft: "10px",
+                      fontSize:"25px"
+                    }}
+                    variant="contained"
+                  />
+                </a> */}
               </div>
             </NavWrap>
           )}

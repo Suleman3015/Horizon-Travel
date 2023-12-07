@@ -37,10 +37,13 @@ export default function Footer() {
               123 Main Street, Anytown, USA
             </Typography> */}
             <Typography variant="body2" color="text.secondary.light">
-              Email: waleed.fahmid.01@gmai.com
+              Email: thehorizontravel.01@gmail.com
             </Typography>
             <Typography variant="body2" color="text.secondary.light">
               Phone: +92 3122775541
+            </Typography>
+            <Typography variant="body2" color="text.secondary.light">
+              Phone: +92 3323582359
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>

@@ -93,12 +93,16 @@ const HeadingTitle = styled.p`
   color: #074090;
   font-weight: bold;
   font-size: 20px;
+  
 `;
 
 const CustomerReviewsTitle = styled.h1`
   padding-top: 0.5rem;
   font-size: 2.5rem;
   font-weight: bold;
+  @media (max-width: 768px) {
+        font-size:2rem
+      }
 `;
 
 const HeadingText = styled.p`
@@ -106,6 +110,9 @@ const HeadingText = styled.p`
   margin-top: 1rem;
   font-size: 20px;
   line-height:28px;
+  @media (max-width: 768px) {
+        font-size:16px
+      }
 `;
 
 export default Heading;

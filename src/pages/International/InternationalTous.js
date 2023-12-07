@@ -46,39 +46,15 @@ export default function AllTour() {
                       marginTop: "10px",
                     }}
                   >
-                    <p
-                      style={{
-                        color: "black",
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {item.title}
-                    </p>
-                    <h3 style={{ color: "#03367e" }}>{item.price}</h3>
+                    <TextStyle>{item.title}</TextStyle>
+                    <TextPrice>{item.price}</TextPrice>
                   </div>
                 </div>
                 <div className="card-bottom">
-                  <span
-                    style={{ color: "gray", fontWeight: "Bold" }}
-                    className="category"
-                  >
-                    {item.days}
-                  </span>
+                  <TextSpan className="category">{item.days}</TextSpan>
                   <div style={{ display: "flex" }}>
                     <a href={msg}>
-                      <button
-                        style={{
-                          backgroundColor: "#050f6b",
-                          padding: "10px 25px",
-                          borderRadius: "5px",
-                          border: "none",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Query?
-                      </button>
+                      <ButtonTheme>Query?</ButtonTheme>
                     </a>
                   </div>
                 </div>
@@ -92,7 +68,7 @@ export default function AllTour() {
 }
 
 const BoxMain = styled.div`
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -101,6 +77,42 @@ const BoxMain = styled.div`
   }
   @media (max-width: 768px) {
     grid-template-columns: 100%;
+  }
+`;
+
+const TextStyle = styled.p`
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const TextPrice = styled.h3`
+  color: #03367e;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
+const TextSpan = styled.span`
+ color: gray, 
+ font-weight: bold,
+ @media (max-width: 768px) {
+   font-size:16px
+  }
+`;
+
+const ButtonTheme = styled.button`
+  background-color: #050f6b;
+  padding: 10px 25px;
+  borderradius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;
 

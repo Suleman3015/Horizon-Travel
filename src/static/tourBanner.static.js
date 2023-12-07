@@ -12,6 +12,7 @@ export const TourBannerStatic = [
         frontImage:Dubai,
         backImage:DubaiBack,
         text:"hello",
+        
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
@@ -19,6 +20,7 @@ export const TourBannerStatic = [
         frontImage:Azerbaijan,
         backImage:AzerbaijanBack,
         text:"hello",
+        
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
@@ -26,6 +28,7 @@ export const TourBannerStatic = [
         frontImage:Hunza,
         backImage:Hunza,
         text:"hello",
+        
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
@@ -33,6 +36,7 @@ export const TourBannerStatic = [
         frontImage:Umrah,
         backImage:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/banners/umrah%20back.jpg",
         text:"hello",
+        
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     }
 
