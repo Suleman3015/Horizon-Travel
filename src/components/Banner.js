@@ -114,6 +114,9 @@ const StyledLink = styled.a`
   font-weight: 500;
   border-radius: 0.5rem;
   transition: background 0.3s, color 0.3s;
+  @media (max-width: 768px) {
+    padding: 1rem 1rem;
+  }
 
   &:hover {
     background: #df6911;

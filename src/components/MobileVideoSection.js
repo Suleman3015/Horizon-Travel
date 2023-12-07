@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import MobVideo from "../videos/mobvideo.mp4";
 import Fb from "../Images/svgs/fb.svg";
 import Insta from "../Images/svgs/insta.svg";
@@ -6,52 +6,12 @@ import Whatsapp from "../Images/svgs/whatsapp.svg";
 import styled from "styled-components";
 
 function MobileVideoSection() {
-  const videoRef = useRef(null);
-  const [userInteracted, setUserInteracted] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const video = videoRef.current;
-      // Check if the video is in the viewport
-      const rect = video.getBoundingClientRect();
-      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+ 
   
-      // Autoplay the video if it's in the viewport and the user has interacted
-      if (isInViewport && userInteracted) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    };
-  
-    // Attach the event listener
-    window.addEventListener('scroll', handleScroll);
-  
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  
-    // Dependencies array is empty to ensure the effect runs once on mount
-  }, [userInteracted]);
-
-  const handleUserInteraction = () => {
-    // Set the userInteracted state to true when the user interacts with the video
-    setUserInteracted(true);
-  };
-
-  // useEffect(() => {
-  //   // Add scroll event listener
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Clean up the event listener when the component is unmounted
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [userInteracted,handleScroll]);
 
   return (
-    <MobileVidMain onClick={handleUserInteraction}>
+    <MobileVidMain 
+    >
       <MobileWrap>
         <LeftBox>
           <h1>GLIMPSE OF RECENT HUNZA TOUR</h1>
@@ -68,11 +28,11 @@ function MobileVideoSection() {
         </LeftBox>
         <RightBox>
           <video
-            ref={videoRef}
+            // ref={videoRef}
             autoPlay
-            loop
+            // loop
             // muted
-            // controls
+            controls
           >
             <source src={MobVideo} type="video/mp4" />
             Your browser does not support the video tag.
@@ -90,7 +50,7 @@ const MobileVidMain = styled.div`
   padding: 40px 0px;
   background-color: black;
   @media (max-width: 768px) {
-   height:fit-content
+    height: fit-content;
   }
 `;
 
@@ -102,15 +62,15 @@ const MobileWrap = styled.div`
   height: 100%;
   align-items: center;
   @media (max-width: 768px) {
-  flex-direction:column-reverse;
-  gap:20px
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 `;
 
 const LeftBox = styled.div`
   width: 50%;
   @media (max-width: 768px) {
-    width:100%
+    width: 100%;
   }
   h1 {
     width: 80%;
@@ -119,9 +79,9 @@ const LeftBox = styled.div`
     color: rgb(214 104 6);
     font-family: ui-monospace;
     @media (max-width: 768px) {
-    width:100%;
-    font-size:1.8rem;
-  }
+      width: 100%;
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -144,9 +104,8 @@ const RightBox = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    @media (max-width: 768px) {
-    width:100%
-    
+  @media (max-width: 768px) {
+    width: 100%;
   }
   video {
     width: 100%;
