@@ -31,7 +31,7 @@ export const TourBannerStatic = [
     {
         id:3,
         frontImage:Umrah,
-        backImage:Umrah,
+        backImage:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/banners/umrah%20back.jpg",
         text:"hello",
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     }
