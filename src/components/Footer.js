@@ -73,7 +73,7 @@ export default function Footer() {
             align="center"
           >
             {"Copyright © "}
-            <Link color="#f48431" href="https://your-website.com/">
+            <Link color="#f48431" href="https://thehorizontravels.com">
               Horizon Travels
             </Link>{" "}
             {new Date().getFullYear()}
