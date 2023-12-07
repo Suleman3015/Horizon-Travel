@@ -8,9 +8,7 @@ import {
   useTheme,
   Typography,
 } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import CallIcon from "@mui/icons-material/Call";
+
 import DrawerComp from "./Drawer";
 import { Link, useLocation } from "react-router-dom";
 import HomeSharpIcon from "@mui/icons-material/HomeSharp";
@@ -18,7 +16,6 @@ import DirectionsTransitSharpIcon from "@mui/icons-material/DirectionsTransitSha
 import ConnectingAirportsSharpIcon from "@mui/icons-material/ConnectingAirportsSharp";
 import PublicSharpIcon from "@mui/icons-material/PublicSharp";
 import { Link as LINK } from "react-scroll";
-import SubscriptionsSharpIcon from "@mui/icons-material/SubscriptionsSharp";
 import Facebook from "../Images/icons/facebook.svg";
 import Insta from "../Images/icons/instagram.svg";
 import Youtube from "../Images/icons/youtube.svg";
@@ -249,10 +246,8 @@ const Navbar = () => {
                     src={Facebook}
                     height={30}
                     sx={{
-                      color: "White",
-                      opacity: "90%",
+                      // color: "White",
                       marginLeft: "10px",
-                      color: "#4267B2",
                     }}
                     variant="contained"
                     alt="horizon tavel"
@@ -265,8 +260,6 @@ const Navbar = () => {
                   src={Insta}
                   alt="horizon"
                     sx={{
-                      color: "White",
-                      opacity: "90%",
                       marginLeft: "10px",
                     }}
                     variant="contained"
@@ -279,10 +272,7 @@ const Navbar = () => {
                     src={Tiktok}
                     alt="horizon tavel"
                     sx={{
-                      color: "White",
-                      opacity: "90%",
                       marginLeft: "10px",
-                      color: "#CD201F",
                     }}
                     variant="contained"
                   />
@@ -294,10 +284,7 @@ const Navbar = () => {
                     src={Youtube}
                     alt="horizon tavel"
                     sx={{
-                      color: "White",
-                      opacity: "90%",
                       marginLeft: "10px",
-                      color: "#CD201F",
                     }}
                     variant="contained"
                   />
@@ -309,10 +296,7 @@ const Navbar = () => {
                     src={Twitter}
                     alt="horizon tavel"
                     sx={{
-                      color: "White",
-                      opacity: "90%",
                       marginLeft: "10px",
-                      color: "#CD201F",
                     }}
                     variant="contained"
                   />

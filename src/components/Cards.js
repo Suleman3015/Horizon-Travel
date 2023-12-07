@@ -1,30 +1,16 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-// import { motion, useInView } from "framer-motion";
+
 
 import { placesData } from "../static/topAttraction";
 
-// const placesData = [
-//   { name: "Hunza", image: Hunza },
-//   { name: "Islamabad", image: Islamabad },
-//   { name: "Kashmir", image: Kashmir },
-//   { name: "Swat", image: Swat },
-//   { name: "Swat", image: Swat },
-//   { name: "Swat", image: Swat },
-// ];
 
 const Cards = () => {
   const ref = useRef(null);
   const [hoverStates, setHoverStates] = useState(
     new Array(placesData.length).fill(false)
   );
-  // const [isHovered, setHovered] = useState(false);
-  // const isInView = useInView(ref, { once: true });
 
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
 
   const handleMouseEnter = (index) => {
     setHoverStates((prevStates) => {
@@ -42,7 +28,6 @@ const Cards = () => {
     });
   };
 
-  // let hoverStates = false;
   console.log(hoverStates, "hover");
   return (
     <div
