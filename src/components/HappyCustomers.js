@@ -20,8 +20,7 @@ const HappyCustomers = () => {
         <h1>
           Our <span>Tourism</span> Facts
         </h1>
-        <p >
-          If your smile is not becoming to you, then you should be coming to me!
+        <p>
           Horizon Travels is a travel agency or company that provides a range of
           services related to travel and tourism, we understand that travel is
           not just about reaching a destination; it's about the journey itself.
@@ -31,7 +30,6 @@ const HappyCustomers = () => {
           or a business traveler, we have the expertise to tailor each trip to
           suit your individual needs
         </p>
-
       </div>
     </StyledHappyCustomers>
   );
@@ -43,12 +41,12 @@ const StyledHappyCustomers = styled(motion.div)`
   position: relative;
   width: 100%;
   height: 60vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: 768px) {
-        height:100vh;
-      };
+    height: 100vh;
+  }
   &::before {
     content: "";
     opacity: 0.3;
@@ -62,15 +60,15 @@ const StyledHappyCustomers = styled(motion.div)`
     position: relative;
     padding: 8px 28px;
     text-align: center;
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
 
     h1 {
       font-family: "Poppins", sans-serif;
       font-weight: bold;
       font-size: 2.5rem;
       color: black;
-      margin-bottom:15px;
+      margin-bottom: 15px;
       @media (max-width: 768px) {
         font-size: 1.8rem;
       }
@@ -86,14 +84,14 @@ const StyledHappyCustomers = styled(motion.div)`
       font-size: 1rem;
       font-family: "Roboto", sans-serif;
       font-weight: bold;
-      font-size:18px;
-      margin-top:10px;
-      line-height:30px;
+      font-size: 18px;
+      margin-top: 10px;
+      line-height: 30px;
       @media (max-width: 768px) {
-        font-size:16px
+        font-size: 16px;
       }
       @media (max-width: 408px) {
-        line-height:25px
+        line-height: 25px;
       }
     }
 

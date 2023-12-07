@@ -72,12 +72,10 @@ const Footer = styled.div`
     font-size: 1.2rem;
     font-weight: 700;
     color:white;
-    @media (max-width: 580px) {
-      font-size: 1rem;
+    @media (max-width: 600px) {
+      font-size: 1rem !important;
     }
-    @media (max-width: 538px) {
-      font-size: 0.9rem;
-    }
+  
   }
 
   p {

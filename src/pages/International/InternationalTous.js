@@ -28,7 +28,7 @@ export default function AllTour() {
                 key={item.id}
               >
                 <div className="productsPageSavings">
-                  <p>30% Off</p>
+                  <p>5% Off</p>
                 </div>
                 <div className="card-top">
                   <img
