@@ -53,7 +53,7 @@ export default function AllTour() {
                 </div>
                 <div className="card-bottom">
                   <TextSpan className="category">{item.days}</TextSpan>
-                  <div style={{ display: "flex" }}>
+                  <div style={{ display: "flex",gap:"3px" }}>
                     <a href={msg}>
                       <ButtonTheme>Query?</ButtonTheme>
                     </a>
@@ -115,8 +115,8 @@ const TextSpan = styled.span`
 
 const ButtonTheme = styled.button`
   background-color: #050f6b;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;
@@ -127,8 +127,8 @@ const ButtonTheme = styled.button`
 
 const ButtonThemePlan = styled.button`
   background-color: #f2892c;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;

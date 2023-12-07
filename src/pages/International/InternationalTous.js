@@ -106,8 +106,8 @@ const TextSpan = styled.span`
 
 const ButtonTheme = styled.button`
   background-color: #050f6b;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;

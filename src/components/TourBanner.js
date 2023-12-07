@@ -123,6 +123,10 @@ const BannerMain = styled.div`
   perspective: 1000px;
   height: 550px;
   margin: 20px;
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 480px;
+  }
 `;
 
 

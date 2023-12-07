@@ -72,7 +72,7 @@ const StyledHappyCustomers = styled(motion.div)`
       color: black;
       margin-bottom:15px;
       @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       span {

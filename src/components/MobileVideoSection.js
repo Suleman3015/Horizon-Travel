@@ -120,7 +120,7 @@ const LeftBox = styled.div`
     font-family: ui-monospace;
     @media (max-width: 768px) {
     width:100%;
-    font-size:2rem;
+    font-size:1.8rem;
   }
   }
 `;

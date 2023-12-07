@@ -23,11 +23,11 @@ function InternationalTours() {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 700 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 700, min: 0 },
       items: 1,
     },
   };
@@ -112,6 +112,7 @@ const RecommendedTour = styled.div`
   h1 {
     @media (max-width: 768px) {
       text-align: center;
+      font-size:1.8rem;
     }
   }
 `;
@@ -244,8 +245,8 @@ const TextSpan = styled.span`
 
 const ButtonTheme = styled.button`
   background-color: #050f6b;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;

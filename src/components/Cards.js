@@ -1,16 +1,13 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-
 import { placesData } from "../static/topAttraction";
-
 
 const Cards = () => {
   const ref = useRef(null);
   const [hoverStates, setHoverStates] = useState(
     new Array(placesData.length).fill(false)
   );
-
 
   const handleMouseEnter = (index) => {
     setHoverStates((prevStates) => {
@@ -30,12 +27,7 @@ const Cards = () => {
 
   console.log(hoverStates, "hover");
   return (
-    <div
-      style={{
-        width: "80%",
-        margin: "auto",
-      }}
-    >
+    <MainHead>
       <span style={{ color: "#074090 ", fontWeight: "bolder" }}>HORIZON's</span>
       <h1 style={{ marginTop: "10px" }}>Top Attractions</h1>
       <StyledSection>
@@ -60,26 +52,9 @@ const Cards = () => {
           </StyledArticle>
         ))}
       </StyledSection>
-    </div>
+    </MainHead>
   );
 };
-
-// const Heading = ({ placeName}) => {
-//   const [isHovered, setHovered] = useState(false);
-
-//   return (
-//     <div
-//       onMouseEnter={() => setHovered(true)}
-//       onMouseLeave={() => setHovered(false)}
-//     >
-//       {isHovered ? (
-//         <p>{placeName}</p>
-//       ) : (
-//         <h1>{placeName}</h1>
-//       )}
-//     </div>
-//   );
-// };
 
 const StyledSection = styled.section`
   margin: 0;
@@ -90,9 +65,7 @@ const StyledSection = styled.section`
   ${"" /* padding-inline: 24px; */}
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
-  
 `;
-
 
 const StyledImg = styled.img`
   position: absolute;
@@ -107,8 +80,18 @@ const StyledImg = styled.img`
   }
 `;
 
-
-
+const MainHead = styled.div`
+  width: 80%;
+  margin: auto;
+  @media (max-width: 768px) {
+   width:90%;
+  };
+  h1 {
+    @media (max-width: 768px) {
+      font-size:1.8rem;
+    }
+  }
+`;
 const StyledArticle = styled.article`
   position: relative;
   border-radius: 12px;
@@ -120,11 +103,13 @@ const StyledArticle = styled.article`
   height: fit-content;
   &:hover {
     ${StyledImg} {
-      transform: scale(1, 1.3); /* Adjust the scaling factor to control the height to be filtered */
+      transform: scale(
+        1,
+        1.3
+      ); /* Adjust the scaling factor to control the height to be filtered */
       filter: brightness(30%);
     }
   }
-
 `;
 
 const StyledFigure = styled.div`
@@ -132,7 +117,7 @@ const StyledFigure = styled.div`
   padding: 0;
   overflow: hidden;
   position: relative;
-  background:transparent;
+  background: transparent;
   height: 0;
   padding-top: 66.6666%; /* You can adjust this value based on your desired aspect ratio */
 
@@ -146,10 +131,9 @@ const StyledFigure = styled.div`
     color: white;
     font-size: 40px;
     font-family: sans-serif;
-    font-weight:bolder
-    ${'' /* border: 2px solid white; */}
+    font-weight: bolder ${"" /* border: 2px solid white; */};
   }
-  .text{
+  .text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -159,44 +143,10 @@ const StyledFigure = styled.div`
     color: white;
     font-size: 15px;
     font-family: sans-serif;
-    width:80%;
-    background:transparent;
-    line-height:20px;
+    width: 80%;
+    background: transparent;
+    line-height: 20px;
   }
 `;
-
-// const StyledImg = styled.img`
-//   max-width: 100%;
-//   transform-origin: center;
-//   object-fit:cover;
-//   transform: scale(var(--img-scale));
-//   transition: transform 0.4s ease-in-out;
-
-//   ${StyledArticle}:hover & {
-//     --img-scale: 1.1;
-//     --link-icon-translate: 0;
-//     --link-icon-opacity: 1;
-//     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-//       rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-//   }
-// `;
-
-// const StyledImg = styled.img`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-//   transition: transform 0.4s ease-in-out;
-
-//   ${StyledArticle}:hover & {
-//     transform: scale(1.1);
-//     /* Add other hover styles if needed */
-//   }
-//   &:hover {
-//     filter: brightness(30%);
-//   }
-// `;
 
 export default Cards;

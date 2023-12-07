@@ -101,7 +101,7 @@ const CustomerReviewsTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   @media (max-width: 768px) {
-        font-size:2rem
+        font-size:1.8rem
       }
 `;
 

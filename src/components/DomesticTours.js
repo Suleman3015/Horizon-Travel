@@ -19,11 +19,11 @@ function DomesticTours() {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 700 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 700, min: 0 },
       items: 1,
     },
   };
@@ -74,7 +74,7 @@ function DomesticTours() {
                     </div>
                     <div className="card-bottom">
                       <TextSpan className="category">{item.days}</TextSpan>
-                      <div style={{ display: "flex" }}>
+                      <div style={{ display: "flex",gap:"3px" }}>
                         <a href={msg}>
                           <ButtonTheme>Query?</ButtonTheme>
                         </a>
@@ -111,6 +111,7 @@ const RecommendedTour = styled.div`
   h1 {
     @media (max-width: 768px) {
       text-align: center;
+      font-size:1.8rem;
     }
   }
 `;
@@ -154,8 +155,8 @@ const TextSpan = styled.span`
 
 const ButtonTheme = styled.button`
   background-color: #050f6b;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;
@@ -166,8 +167,8 @@ const ButtonTheme = styled.button`
 
 const ButtonThemePlan = styled.button`
   background-color: #f2892c;
-  padding: 10px 25px;
-  borderradius: 5px;
+  padding: 6px 20px;
+  border-radius: 6px;
   border: none;
   color: white;
   cursor: pointer;
