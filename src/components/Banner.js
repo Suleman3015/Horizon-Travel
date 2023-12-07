@@ -18,7 +18,7 @@ const Banner = () => {
             {/* Discover what is untold. */}
           </Title>
           <Description>
-          WE TREAT OUR GUEST AS A FAMILY MEMBERS,EVERY HORIZON ENVEILS A NEW CHAPTER IN YOUR TRAVELS NARRATIVE. 
+          WE TREAT OUR GUESTS AS A FAMILY MEMBERS,EVERY HORIZON ENVEILS A NEW CHAPTER IN YOUR TRAVELS NARRATIVE. 
             {/* Welcome to Horizon Travels, where your dreams meet horizons. Our commitment is not just to take you places but to
             weave stories of unforgettable moments. Join us on a voyage where
             every journey is an emotion, and every horizon unveils a new chapter
