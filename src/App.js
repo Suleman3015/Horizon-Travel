@@ -23,8 +23,6 @@ const AnimatedWhatsappLogo = styled.div`
   z-index: 20;
   right: 20px;
   bottom: 20px;
-  border: 2px solid #050f6b;
-  border-radius: 50%;
   animation: ${pulse} 1.5s infinite;
 `;
 
