@@ -40,7 +40,7 @@ const Banner = () => {
 };
 
 const StyledBanner = styled.div`
-  background: url(${banner}) no-repeat center center fixed;
+  background: url(${banner}) no-repeat center center;
   background-size: cover;
   height: 70vh;
   display: flex;
