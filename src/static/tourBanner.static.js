@@ -1,8 +1,8 @@
 import Dubai from "../Images/postBanner/dubai.png";
 import DubaiBack from "../Images/postBanner/dubaiBack.png";
 import Azerbaijan from "../Images/postBanner/azerbaijan.png";
-import AzerbaijanBack from "../Images/postBanner/azerbaijanBack.png";
-import Hunza from "../Images/postBanner/hunza.png";
+// import AzerbaijanBack from "../Images/postBanner/azerbaijanBack.png";
+// import Hunza from "../Images/postBanner/hunza.png";
 import Umrah from "../Images/postBanner/umrah.jpg"
 
 
