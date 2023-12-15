@@ -18,19 +18,12 @@ export const TourBannerStatic = [
     {
         id:1,
         frontImage:Azerbaijan,
-        backImage:AzerbaijanBack,
+        backImage:"",
         text:"hello",
         
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
-    {
-        id:2,
-        frontImage:Hunza,
-        backImage:Hunza,
-        text:"hello",
-        
-        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
-    },
+   
     {
         id:3,
         frontImage:Umrah,
