@@ -38,7 +38,15 @@ export const TourBannerStatic = [
         text:"hello",
         
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
-    }
+    },
+       {
+        id:4,
+        frontImage:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/banners/kashmir%20and%20shogran%20copy.jpg",
+        backImage:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/banners/kashmir%20and%20shogran%20copy.jpg",
+        text:"hello",
+        
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours,sawat,swat pakistan,"
+    },
 
 
 
