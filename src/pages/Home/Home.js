@@ -13,10 +13,9 @@ function Home() {
   return (
     <div style={{ position: "relative" }}>
       <Banner />
-     <TourBanner />
+      <TourBanner />
       <DomesticTours />
       <InternationalTours />
-   
       <HappyCustomers />
       <Element name="section1">
         <div style={{ padding: "80px 0px" }}>
@@ -28,14 +27,7 @@ function Home() {
         </div>
       </Element>
       <MobileVideoSection />
-      {/* <Heading
-        title={"More Tours"}
-        bigTitle={"Discover with Horizon Travels"}
-        description={`Horizon Travels is a travel agency or company that provides a range
-            of services related to travel and tourism`}
-      /> */}
       <Cards />
-
       <Clients />
     </div>
   );
