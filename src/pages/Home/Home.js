@@ -13,9 +13,10 @@ function Home() {
   return (
     <div style={{ position: "relative" }}>
       <Banner />
+     <TourBanner />
       <DomesticTours />
       <InternationalTours />
-      <TourBanner />
+   
       <HappyCustomers />
       <Element name="section1">
         <div style={{ padding: "80px 0px" }}>
