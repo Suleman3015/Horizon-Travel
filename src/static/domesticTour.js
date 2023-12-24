@@ -1,7 +1,7 @@
 export const DomesticTourStatic = [
   {
     title: "Hunza And Naltar ",
-    price: "Rs 42,500",
+    price: "Rs 33,450",
     days: "10 Days",
     img:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/national%20tours/hunza.jpg",
     feature:true,
@@ -10,7 +10,7 @@ export const DomesticTourStatic = [
   },
   {
     title: "Kashmir And Shogran ",
-    price: "Rs 36,500",
+    price: "Rs 26,450",
     days: "9 Days",
     img:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/national%20tours/kashmir%26shodran.jpg",
     feature:true,
@@ -26,7 +26,7 @@ export const DomesticTourStatic = [
   },
   {
     title: "Swat And Shogran ",
-    price: "Rs 36,500",
+    price: "Rs 23,450",
     days: "9 Days",
     img:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/national%20tours/swat.jpg",
     feature:true,
