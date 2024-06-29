@@ -1,0 +1,25 @@
+.carouselMainWrap{
+    width: 80%;
+    height: 600px;
+    margin: 100px auto;
+}
+
+.carouselSlide{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;  
+    background-color: blue; 
+
+}
+
+.carouselLeftSec{
+    width: 35%;
+    height: 100%;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+
+    }
+}
