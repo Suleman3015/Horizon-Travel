@@ -1,9 +1,3 @@
-import Dubai from "../Images/postBanner/dubai.png";
-import DubaiBack from "../Images/postBanner/dubaiBack.png";
-import Azerbaijan from "../Images/postBanner/azerbaijan.png";
-// import AzerbaijanBack from "../Images/postBanner/azerbaijanBack.png";
-// import Hunza from "../Images/postBanner/hunza.png";
-import Umrah from "../Images/postBanner/umrah.jpg"
 import update1 from "../Images/postBanner/updated1.jpeg"
 import update2 from "../Images/postBanner/updated2.jpeg"
 import update3 from "../Images/postBanner/updated3.jpeg"
@@ -16,7 +10,7 @@ export const TourBannerStatic = [
         frontImage:update1,
         backImage:update1,
         text:"hello",
-        
+
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
     {
@@ -24,16 +18,16 @@ export const TourBannerStatic = [
         frontImage:update2,
         backImage:update2,
         text:"hello",
-        
+
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
-   
+
     {
         id:3,
         frontImage:update3,
         backImage:update3,
         text:"hello",
-        
+
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
     },
        {
