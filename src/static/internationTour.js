@@ -4,7 +4,7 @@ export const InternationalToursStatic = [
       price: "Rs 295,000",
       days: "15 Days",
       feature:true,
-      img:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/international%20tour/kaaba.jpg",
+      img:"https://raw.githubusercontent.com/Suleman3015/Horizon-Travel/pdfs/content/international%20tour/umrah.jpg",
 
     },
     {

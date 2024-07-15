@@ -60,7 +60,7 @@ function InternationalTours() {
                     key={item.id}
                   >
                     <div className="productsPageSavings">
-                      <p>5% Off</p>
+                      <p>Hot</p>
                     </div>
                     <div className="card-top">
                       <img
@@ -79,7 +79,7 @@ function InternationalTours() {
                         }}
                       >
                         <TextStyle>{item.title}</TextStyle>
-                        <TextPrice>{item.price}</TextPrice>
+                        {/* <TextPrice>{item.price}</TextPrice> */}
                       </div>
                     </div>
                     <div className="card-bottom">
@@ -236,7 +236,7 @@ const TextPrice = styled.h3`
 `;
 
 const TextSpan = styled.span`
- color: gray, 
+ color: gray,
  font-weight: bold,
  @media (max-width: 768px) {
    font-size:16px

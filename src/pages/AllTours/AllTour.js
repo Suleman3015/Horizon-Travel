@@ -29,7 +29,7 @@ export default function AllTour() {
                 key={item.id}
               >
                 <div className="productsPageSavings">
-                  <p>5% Off</p>
+                  <p>Hot</p>
                 </div>
                 <div className="card-top">
                   <img
@@ -106,7 +106,7 @@ const TextPrice = styled.h3`
 `;
 
 const TextSpan = styled.span`
- color: gray, 
+ color: gray,
  font-weight: bold,
  @media (max-width: 768px) {
    font-size:16px
