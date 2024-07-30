@@ -228,12 +228,12 @@ const TextStyle = styled.p`
   }
 `;
 
-const TextPrice = styled.h3`
-  color: #03367e;
-  @media (max-width: 768px) {
-    font-size: 16px !important;
-  }
-`;
+// const TextPrice = styled.h3`
+//   color: #03367e;
+//   @media (max-width: 768px) {
+//     font-size: 16px !important;
+//   }
+// `;
 
 const TextSpan = styled.span`
  color: gray,
