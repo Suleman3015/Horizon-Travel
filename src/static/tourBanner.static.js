@@ -2,7 +2,8 @@ import update1 from "../Images/updatedBanner1.jpeg"
 import update2 from "../Images/updatedBanner2.jpeg"
 import update3 from "../Images/updatedBanner3.jpeg"
 import update4 from "../Images/updatedBanner4.jpeg"
-
+import PakistanTour from "../images/pakistanTour.jpeg"
+import TurkeyTour from "../images/turkeyTour.jpeg"
 
 export const TourBannerStatic = [
     {
@@ -34,6 +35,21 @@ export const TourBannerStatic = [
         id:4,
         frontImage:update4,
         backImage:update4,
+        text:"hello",
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours,sawat,swat pakistan,"
+    },
+      {
+        id:5,
+        frontImage:PakistanTour,
+        backImage:PakistanTour,
+        text:"hello",
+
+        alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours"
+    },
+       {
+        id:5,
+        frontImage:TurkeyTour,
+        backImage:TurkeyTour,
         text:"hello",
         alt:"horizon travels,tours,paksitan tours,tourism,tourism company,travel pakistan,tours,pakistan tour,pakistan tours,sawat,swat pakistan,"
     },
