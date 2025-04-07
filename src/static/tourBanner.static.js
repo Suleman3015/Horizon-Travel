@@ -1,7 +1,7 @@
-import update1 from "../Images/postBanner/updated1.jpeg"
-import update2 from "../Images/postBanner/updated2.jpeg"
-import update3 from "../Images/postBanner/updated3.jpeg"
-import update4 from "../Images/postBanner/updated4.jpeg"
+import update1 from "../Images/postBanner/updatedTour1.jpeg"
+import update2 from "../Images/postBanner/updatedTour2.jpeg"
+import update3 from "../Images/postBanner/updatedTour3.jpeg"
+import update4 from "../Images/postBanner/updatedTour4.jpeg"
 
 
 export const TourBannerStatic = [
